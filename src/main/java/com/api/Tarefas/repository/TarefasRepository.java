@@ -1,4 +1,6 @@
 package com.api.Tarefas.repository;
 
-public class TarefasRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface TarefasRepository extends JpaRepository {
 }
