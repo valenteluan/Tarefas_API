@@ -10,8 +10,11 @@ public class Tarefas {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    
+
+    @NotBlank
     private String nome;
+
+    @NotBlank
     private String descricao;
     private boolean realizado;
     private int prioridade;

@@ -2,6 +2,7 @@ package com.api.Tarefas.controller;
 
 import com.api.Tarefas.entity.Tarefas;
 import com.api.Tarefas.service.TarefasService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,7 +16,7 @@ public class Controller {
     private TarefasService service;
 
     @PostMapping
-    List<Tarefas> create(@RequestBody Tarefas tarefas) {
+    List<Tarefas> create(@RequestBody @Valid Tarefas tarefas) {
         return service.create(tarefas);
     }
 
